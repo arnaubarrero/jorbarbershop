@@ -23,7 +23,6 @@ export default function SlotMachine() {
   const [leverDown, setLeverDown] = useState(false)
   const [phone, setPhone] = useState<string | null>(null)
   const leverTimeout = useRef<NodeJS.Timeout | null>(null)
-
   const askPhone = async () => {
     const { value: phoneValue } = await Swal.fire({
       title: 'Introduce tu número de teléfono',
