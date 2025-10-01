@@ -1,0 +1,8 @@
+{
+  "name": "Ranna Token",
+  "symbol": "RANNA",
+  "description": "Ranna Token oficial, cada RANNA vale 1 USDT",
+  "image": "https://silver-personal-owl-549.mypinata.cloud/ipfs/bafybeifzeetshd23qqrwtfywnx6lc2awk3uxtkoj37bjc7fjcinsignaoq",
+  "external_url": "https://ranna-token.vercel.app/",
+  "decimals": 18
+}
