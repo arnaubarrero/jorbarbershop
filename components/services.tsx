@@ -113,7 +113,7 @@ const services = {
 export function Services() {
   const [selectedLocation, setSelectedLocation] = useState<"esplugas" | "cornella">("esplugas")
   const currentServices = services[selectedLocation]
-  const booksyUrls: Record<string, string> = {
+  const booksyUrls: Record<"esplugas" | "cornella", string> = {
     esplugas:
       "https://booksy.com/es-es/31400_jor-barbershop-esplugues_barberia_48788_esplugues-de-llobregat#ba_s=sh_1",
     cornella:
@@ -137,22 +137,20 @@ export function Services() {
                 <Button
                   variant={selectedLocation === "esplugas" ? "default" : "ghost"}
                   onClick={() => setSelectedLocation("esplugas")}
-                  className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-300 ${
-                    selectedLocation === "esplugas"
-                      ? "bg-primary text-primary-foreground shadow-lg"
-                      : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-                  }`}
+                  className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-300 ${selectedLocation === "esplugas"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                    }`}
                 >
                   Esplugas
                 </Button>
                 <Button
                   variant={selectedLocation === "cornella" ? "default" : "ghost"}
                   onClick={() => setSelectedLocation("cornella")}
-                  className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-300 ${
-                    selectedLocation === "cornella"
-                      ? "bg-primary text-primary-foreground shadow-lg"
-                      : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-                  }`}
+                  className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-300 ${selectedLocation === "cornella"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                    }`}
                 >
                   Cornellà
                 </Button>
