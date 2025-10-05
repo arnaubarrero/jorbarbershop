@@ -1,6 +1,5 @@
 
 "use client"
-import Header from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { ImageCarousel } from "@/components/image-carousel"
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <main className="min-h-screen relative texture-overlay">
       <FloatingBubbles />
-      <Header />
       <Hero />
       <Services />
       <ImageCarousel />

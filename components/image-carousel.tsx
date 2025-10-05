@@ -6,20 +6,28 @@ import { Button } from "@/components/ui/button"
 
 const images = [
   {
-    src: "/modern-barber-shop-interior-with-dark-aesthetic.jpg",
+    src: "/img1.jpg",
     alt: "Interior moderno de barbería",
   },
   {
-    src: "/professional-barber-cutting-hair-with-precision.jpg",
+    src: "/img2.jpg",
     alt: "Barbero profesional cortando cabello",
   },
   {
-    src: "/stylish-beard-trimming-and-grooming.jpg",
+    src: "/img3.jpg",
     alt: "Arreglo de barba profesional",
   },
   {
-    src: "/vintage-barber-tools-and-equipment.jpg",
+    src: "/img4.jpg",
     alt: "Herramientas de barbería vintage",
+  },
+  {
+    src: "/img5.jpg",
+    alt: "Cliente satisfecho con su nuevo corte de cabello",
+  },
+  {
+    src: "/img6.jpg",
+    alt: "Ambiente acogedor de barbería",
   },
 ]
 
@@ -57,9 +65,8 @@ export function ImageCarousel() {
             {images.map((image, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-opacity duration-1000 ${
-                  index === currentIndex ? "opacity-100" : "opacity-0"
-                }`}
+                className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? "opacity-100" : "opacity-0"
+                  }`}
               >
                 <img
                   src={image.src || "/placeholder.svg"}
@@ -92,9 +99,8 @@ export function ImageCarousel() {
             {images.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex ? "bg-primary" : "bg-white/30"
-                }`}
+                className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? "bg-primary" : "bg-white/30"
+                  }`}
                 onClick={() => setCurrentIndex(index)}
               />
             ))}
