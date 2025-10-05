@@ -1,2 +1,0 @@
-// Instala sweetalert2 para el alert moderno
-yarn add sweetalert2
