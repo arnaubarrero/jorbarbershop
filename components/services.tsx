@@ -113,6 +113,12 @@ const services = {
 export function Services() {
   const [selectedLocation, setSelectedLocation] = useState<"esplugas" | "cornella">("esplugas")
   const currentServices = services[selectedLocation]
+  const booksyUrls: Record<string, string> = {
+    esplugas:
+      "https://booksy.com/es-es/31400_jor-barbershop-esplugues_barberia_48788_esplugues-de-llobregat#ba_s=sh_1",
+    cornella:
+      "https://booksy.com/es-es/100820_jor-barbershop-cornella_barberia_48776_cornella-de-llobregat#ba_s=sh_1",
+  }
 
   return (
     <section className="py-16 px-4 md:px-6 relative z-10">
@@ -191,11 +197,14 @@ export function Services() {
                     {service.description}
                   </p>
                   <Button
+                    asChild
                     variant="outline"
                     size="sm"
                     className="w-full bg-transparent border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   >
-                    Reservar
+                    <a href={booksyUrls[selectedLocation]} target="_blank" rel="noopener noreferrer">
+                      Reservar
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
